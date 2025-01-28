@@ -1,6 +1,6 @@
 # Lab Module 12 - Semester Project - Final Write-up
 
-NOTE: Be sure to implement all the Lab Module 12 requirements listed at [Lab Module 12](https://github.com/orgs/programming-the-iot/projects/1#column-10488565).
+NOTE: Be sure to implement all the Lab Module 12 requirements listed at Lab Module 12.
 
 
 ## Description
