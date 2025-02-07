@@ -2,22 +2,25 @@
 
 ## Lab Module 01
 
-Be sure to implement all the PIOT-GDA-* issues (requirements).
+Be sure to implement all the PIOT-GDA-\* issues (requirements).
 
 ### Description
 
 NOTE: Include two full paragraphs describing your implementation approach by answering the questions listed below.
 
-What does your implementation do? 
+#### What does your implementation do?
+
+I just installed the java extensions from Visual Studio Code to make it work.
 
 How does your implementation work?
+
+I created a task that automatically downloads the extensions when the folder is opened with Visual Studio Code.
 
 ### Code Repository and Branch
 
 NOTE: Be sure to include the branch.
 
-URL: 
-
+URL: [chapter01](https://github.com/SantiagoRR2004/PIC-java-components/tree/chapter01)
 
 ### Unit Tests Executed
 
@@ -25,9 +28,7 @@ NOTE: The instructor will execute your unit tests. You only need to list each te
 (e.g. ConfigUtilTest, DataUtilTest, etc). Be sure to include all previous tests, too,
 since you need to ensure you haven't introduced regressions.
 
-- 
-- 
-- 
+- [ConfigUtilTest](https://github.com/SantiagoRR2004/PIC-java-components/blob/main/src/test/java/programmingtheiot/part01/unit/common/ConfigUtilTest.java)
 
 ### Integration Tests Executed
 
@@ -36,8 +37,6 @@ some exceptions (such as your cloud connectivity tests). In such cases, they'll 
 your code to ensure it's correct. As for the tests you execute, you only need to list each
 test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 
-- 
-- 
-- 
+- [ConstrainedDeviceAppTest](https://github.com/SantiagoRR2004/PIC-java-components/blob/main/src/test/java/programmingtheiot/part01/integration/app/GatewayDeviceAppTest.java)
 
 EOF.
