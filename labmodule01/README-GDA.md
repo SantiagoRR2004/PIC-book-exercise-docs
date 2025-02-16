@@ -10,11 +10,13 @@ NOTE: Include two full paragraphs describing your implementation approach by ans
 
 #### What does your implementation do?
 
-I just installed the java extensions from Visual Studio Code to make it work.
+I installed the java extensions from Visual Studio Code to make it work and installed maven doing "sudo apt install maven" in the terminal.
+I had to add settings.json to the .vscode folder to make the logging appear in the DEBUG CONSOLE tab when a test is executed.
 
 How does your implementation work?
 
 I created a task that automatically downloads the extensions when the folder is opened with Visual Studio Code.
+The needed text was also added in the right places.
 
 ### Code Repository and Branch
 
