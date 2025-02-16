@@ -10,7 +10,11 @@ NOTE: Include two full paragraphs describing your implementation approach by ans
 
 #### What does your implementation do?
 
+Now the system monitors the CPU and memory of the device and loggs it at regular intervals.
+
 #### How does your implementation work?
+
+It works by using abstract classes and the psutil library.
 
 ### Code Repository and Branch
 
