@@ -10,7 +10,11 @@ NOTE: Include two full paragraphs describing your implementation approach by ans
 
 #### What does your implementation do?
 
+Now the system monitors the CPU and memory of the device and logs it at regular intervals.
+
 #### How does your implementation work?
+
+It is achieved by using multiple classes and java.lang.management.OperatingSystemMXBean.
 
 ### Code Repository and Branch
 
