@@ -10,7 +10,11 @@ NOTE: Include two full paragraphs describing your implementation approach by ans
 
 #### What does your implementation do?
 
+In the constrained device application the ability to simulate sensors and actuators was implemented. Some classes we created to store the data for the sensors and actuators. In this chapter managers are created to be in charge of the the sensors and actuators. There is a manager that controls the sensor manager, the actuator manager and the CPU information manager. These middle managers are prepared to handle simulated and emulated sensors and actuators.
+
 #### How does your implementation work?
+
+The implementation works by using inheritance between classes and managers that control objects. The BaseActuatorSimTask and BaseSensorSimTask are classes that are inherited by the actuators and sensors and that have the functions required to create simulated data with ActuatorData and SensorData respectively. The children of BaseActuatorSimTask are HumidifierActuatorSimTask and HvacActuatorSimTask. The children of BaseSensorSimTask are HumiditySensorSimTask, PressureSensorSimTask and TemperatureSensorSimTask. The different simulated sensors are used by SensorAdapterManager to periodically generate data. The actuator children are used by ActuatorAdapterManager to send messages to them or set a listener. These 2 managers are programmed in a generic way that allow them to work with emulated sensors and actuators in the future. Those 2 manager plus SystemPerformanceManager are finally controlled by the DeviceDataManager.
 
 ### Code Repository and Branch
 
