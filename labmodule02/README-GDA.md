@@ -10,11 +10,13 @@ NOTE: Include two full paragraphs describing your implementation approach by ans
 
 #### What does your implementation do?
 
-Now the system monitors the CPU and memory of the device and logs it at regular intervals.
+Now the gateway device application has a manager that monitors the CPU and memory of the device and loggs it at regular intervals.
 
 #### How does your implementation work?
 
-It is achieved by using multiple classes and java.lang.management.OperatingSystemMXBean.
+The SystemPerformanceManager creates instances of SystemCpuUtilTask and SystemMemUtilTask and uses them to log information about the CPU. The 2 classes inherit from an abstract class called BaseSystemUtilTask and they obtain the information by using java.lang.management.OperatingSystemMXBean.
+
+An instance SystemPerformanceManager is used by the GatewayDeviceApp to monitor the CPU and memory of the device.
 
 ### Code Repository and Branch
 
