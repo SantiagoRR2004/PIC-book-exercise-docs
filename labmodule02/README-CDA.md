@@ -12,11 +12,15 @@ NOTE: Include two full paragraphs describing your implementation approach by ans
 
 Now the constrained device application has a manager that monitors the CPU and memory of the device and loggs it at regular intervals.
 
+Extra: Now it also logs the disk usage and the bytes sent and received between log intervals.
+
 #### How does your implementation work?
 
 The SystemPerformanceManager creates instances of SystemCpuUtilTask and SystemMemUtilTask and uses them to log information about the CPU. The 2 classes inherit from an abstract class called BaseSystemUtilTask and they obtain the information by using the psutil library.
 
 An instance SystemPerformanceManager is used by the ConstrainedDeviceApp to monitor the CPU and memory of the device.
+
+Extra: SystemDiskUtilTask, SystemNetIntUtilTask and SystemNetOutUtilTask are implemented like the other 2 classes.
 
 ### Code Repository and Branch
 
@@ -33,6 +37,9 @@ since you need to ensure you haven't introduced regressions.
 - [ConfigUtilTest](https://github.com/SantiagoRR2004/PIC-python-components/blob/main/src/test/python/programmingtheiot/part01/unit/common/ConfigUtilTest.py)
 - [SystemCpuUtilTaskTest](https://github.com/SantiagoRR2004/PIC-python-components/blob/main/src/test/python/programmingtheiot/part01/unit/system/SystemCpuUtilTaskTest.py)
 - [SystemMemUtilTaskTest](https://github.com/SantiagoRR2004/PIC-python-components/blob/main/src/test/python/programmingtheiot/part01/unit/system/SystemMemUtilTaskTest.py)
+- [SystemDiskUtilTaskTest](https://github.com/SantiagoRR2004/PIC-python-components/blob/main/src/test/python/programmingtheiot/part01/unit/system/SystemDiskUtilTaskTest.py)
+- [SystemNetIntUtilTaskTest](https://github.com/SantiagoRR2004/PIC-python-components/blob/main/src/test/python/programmingtheiot/part01/unit/system/SystemNetIntUtilTaskTest.py)
+- [SystemNetOutUtilTaskTest](https://github.com/SantiagoRR2004/PIC-python-components/blob/main/src/test/python/programmingtheiot/part01/unit/system/SystemNetOutUtilTaskTest.py)
 
 ### Integration Tests Executed
 
