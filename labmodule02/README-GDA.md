@@ -12,11 +12,15 @@ NOTE: Include two full paragraphs describing your implementation approach by ans
 
 Now the gateway device application has a manager that monitors the CPU and memory of the device and loggs it at regular intervals.
 
+Extra: Now it also logs the disk usage and the bytes sent and received between log intervals.
+
 #### How does your implementation work?
 
 The SystemPerformanceManager creates instances of SystemCpuUtilTask and SystemMemUtilTask and uses them to log information about the CPU. The 2 classes inherit from an abstract class called BaseSystemUtilTask and they obtain the information by using java.lang.management.OperatingSystemMXBean.
 
 An instance SystemPerformanceManager is used by the GatewayDeviceApp to monitor the CPU and memory of the device.
+
+Extra: SystemDiskUtilTask, SystemNetIntUtilTask and SystemNetOutUtilTask are implemented like the other 2 classes. I also made all the classes that implement BaseSystemUtilTask to use their proper config constants instead of using the default. I don't know why this isn't done in the book.
 
 ### Code Repository and Branch
 
@@ -33,6 +37,9 @@ since you need to ensure you haven't introduced regressions.
 - [ConfigUtilTest](https://github.com/SantiagoRR2004/PIC-java-components/blob/main/src/test/java/programmingtheiot/part01/unit/common/ConfigUtilTest.java)
 - [SystemCpuUtilTaskTest](https://github.com/SantiagoRR2004/PIC-java-components/blob/main/src/test/java/programmingtheiot/part01/unit/system/SystemCpuUtilTaskTest.java)
 - [SystemMemUtilTaskTest](https://github.com/SantiagoRR2004/PIC-java-components/blob/main/src/test/java/programmingtheiot/part01/unit/system/SystemMemUtilTaskTest.java)
+- [SystemDiskUtilTaskTest](https://github.com/SantiagoRR2004/PIC-java-components/blob/main/src/test/java/programmingtheiot/part01/unit/system/SystemDiskUtilTaskTest.java)
+- [SystemNetInUtilTaskTest](https://github.com/SantiagoRR2004/PIC-java-components/blob/main/src/test/java/programmingtheiot/part01/unit/system/SystemNetInUtilTaskTest.java)
+- [SystemNetOutUtilTaskTest](https://github.com/SantiagoRR2004/PIC-java-components/blob/main/src/test/java/programmingtheiot/part01/unit/system/SystemNetOutUtilTaskTest.java)
 
 ### Integration Tests Executed
 
