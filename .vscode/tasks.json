@@ -1,0 +1,41 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Download Python",
+      "type": "shell",
+      "command": "bash downloadPython.sh",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "focus": false,
+        "panel": "new"
+      },
+      "runOptions": {
+        "runOn": "folderOpen" // Run this task when the folder is opened
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Download Java",
+      "type": "shell",
+      "command": "bash downloadJava.sh",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "focus": false,
+        "panel": "new"
+      },
+      "runOptions": {
+        "runOn": "folderOpen" // Run this task when the folder is opened
+      },
+      "problemMatcher": []
+    }
+  ]
+}
