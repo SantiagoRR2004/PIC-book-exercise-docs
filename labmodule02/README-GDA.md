@@ -34,12 +34,12 @@ NOTE: The instructor will execute your unit tests. You only need to list each te
 (e.g. ConfigUtilTest, DataUtilTest, etc). Be sure to include all previous tests, too,
 since you need to ensure you haven't introduced regressions.
 
-- [ConfigUtilTest](https://github.com/SantiagoRR2004/PIC-java-components/blob/main/src/test/java/programmingtheiot/part01/unit/common/ConfigUtilTest.java)
-- [SystemCpuUtilTaskTest](https://github.com/SantiagoRR2004/PIC-java-components/blob/main/src/test/java/programmingtheiot/part01/unit/system/SystemCpuUtilTaskTest.java)
-- [SystemMemUtilTaskTest](https://github.com/SantiagoRR2004/PIC-java-components/blob/main/src/test/java/programmingtheiot/part01/unit/system/SystemMemUtilTaskTest.java)
-- [SystemDiskUtilTaskTest](https://github.com/SantiagoRR2004/PIC-java-components/blob/main/src/test/java/programmingtheiot/part01/unit/system/SystemDiskUtilTaskTest.java)
-- [SystemNetInUtilTaskTest](https://github.com/SantiagoRR2004/PIC-java-components/blob/main/src/test/java/programmingtheiot/part01/unit/system/SystemNetInUtilTaskTest.java)
-- [SystemNetOutUtilTaskTest](https://github.com/SantiagoRR2004/PIC-java-components/blob/main/src/test/java/programmingtheiot/part01/unit/system/SystemNetOutUtilTaskTest.java)
+- [ConfigUtilTest](../Java/src/test/java/programmingtheiot/part01/unit/common/ConfigUtilTest.java)
+- [SystemCpuUtilTaskTest](../Java/src/test/java/programmingtheiot/part01/unit/system/SystemCpuUtilTaskTest.java)
+- [SystemMemUtilTaskTest](../Java/src/test/java/programmingtheiot/part01/unit/system/SystemMemUtilTaskTest.java)
+- [SystemDiskUtilTaskTest](../Java/src/test/java/programmingtheiot/part01/unit/system/SystemDiskUtilTaskTest.java)
+- [SystemNetInUtilTaskTest](../Java/src/test/java/programmingtheiot/part01/unit/system/SystemNetInUtilTaskTest.java)
+- [SystemNetOutUtilTaskTest](../Java/src/test/java/programmingtheiot/part01/unit/system/SystemNetOutUtilTaskTest.java)
 
 ### Integration Tests Executed
 
@@ -48,7 +48,7 @@ some exceptions (such as your cloud connectivity tests). In such cases, they'll 
 your code to ensure it's correct. As for the tests you execute, you only need to list each
 test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 
-- [GatewayDeviceAppTest](https://github.com/SantiagoRR2004/PIC-java-components/blob/main/src/test/java/programmingtheiot/part01/integration/app/GatewayDeviceAppTest.java)
-- [SystemPerformanceManagerTest](https://github.com/SantiagoRR2004/PIC-java-components/blob/main/src/test/java/programmingtheiot/part01/integration/system/SystemPerformanceManagerTest.java)
+- [GatewayDeviceAppTest](../Java/src/test/java/programmingtheiot/part01/integration/app/GatewayDeviceAppTest.java)
+- [SystemPerformanceManagerTest](../Java/src/test/java/programmingtheiot/part01/integration/system/SystemPerformanceManagerTest.java)
 
 EOF.
