@@ -34,12 +34,12 @@ NOTE: The instructor will execute your unit tests. You only need to list each te
 (e.g. ConfigUtilTest, DataUtilTest, etc). Be sure to include all previous tests, too,
 since you need to ensure you haven't introduced regressions.
 
-- [ConfigUtilTest](https://github.com/SantiagoRR2004/PIC-python-components/blob/main/src/test/python/programmingtheiot/part01/unit/common/ConfigUtilTest.py)
-- [SystemCpuUtilTaskTest](https://github.com/SantiagoRR2004/PIC-python-components/blob/main/src/test/python/programmingtheiot/part01/unit/system/SystemCpuUtilTaskTest.py)
-- [SystemMemUtilTaskTest](https://github.com/SantiagoRR2004/PIC-python-components/blob/main/src/test/python/programmingtheiot/part01/unit/system/SystemMemUtilTaskTest.py)
-- [SystemDiskUtilTaskTest](https://github.com/SantiagoRR2004/PIC-python-components/blob/main/src/test/python/programmingtheiot/part01/unit/system/SystemDiskUtilTaskTest.py)
-- [SystemNetIntUtilTaskTest](https://github.com/SantiagoRR2004/PIC-python-components/blob/main/src/test/python/programmingtheiot/part01/unit/system/SystemNetIntUtilTaskTest.py)
-- [SystemNetOutUtilTaskTest](https://github.com/SantiagoRR2004/PIC-python-components/blob/main/src/test/python/programmingtheiot/part01/unit/system/SystemNetOutUtilTaskTest.py)
+- [ConfigUtilTest](../Python/src/test/python/programmingtheiot/part01/unit/common/ConfigUtilTest.py)
+- [SystemCpuUtilTaskTest](../Python/src/test/python/programmingtheiot/part01/unit/system/SystemCpuUtilTaskTest.py)
+- [SystemMemUtilTaskTest](../Python/src/test/python/programmingtheiot/part01/unit/system/SystemMemUtilTaskTest.py)
+- [SystemDiskUtilTaskTest](../Python/src/test/python/programmingtheiot/part01/unit/system/SystemDiskUtilTaskTest.py)
+- [SystemNetIntUtilTaskTest](../Python/src/test/python/programmingtheiot/part01/unit/system/SystemNetIntUtilTaskTest.py)
+- [SystemNetOutUtilTaskTest](../Python/src/test/python/programmingtheiot/part01/unit/system/SystemNetOutUtilTaskTest.py)
 
 ### Integration Tests Executed
 
@@ -48,7 +48,7 @@ some exceptions (such as your cloud connectivity tests). In such cases, they'll 
 your code to ensure it's correct. As for the tests you execute, you only need to list each
 test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 
-- [ConstrainedDeviceAppTest](https://github.com/SantiagoRR2004/PIC-python-components/blob/main/src/test/python/programmingtheiot/part01/integration/app/ConstrainedDeviceAppTest.py)
-- [SystemPerformanceManagerTest](https://github.com/SantiagoRR2004/PIC-python-components/blob/main/src/test/python/programmingtheiot/part01/integration/system/SystemPerformanceManagerTest.py)
+- [ConstrainedDeviceAppTest](../Python/src/test/python/programmingtheiot/part01/integration/app/ConstrainedDeviceAppTest.py)
+- [SystemPerformanceManagerTest](../Python/src/test/python/programmingtheiot/part01/integration/system/SystemPerformanceManagerTest.py)
 
 EOF.
