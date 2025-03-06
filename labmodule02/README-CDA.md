@@ -20,7 +20,7 @@ The SystemPerformanceManager creates instances of SystemCpuUtilTask and SystemMe
 
 An instance SystemPerformanceManager is used by the ConstrainedDeviceApp to monitor the CPU and memory of the device.
 
-Extra: SystemDiskUtilTask, SystemNetIntUtilTask and SystemNetOutUtilTask are implemented like the other 2 classes.
+Extra: SystemDiskUtilTask, SystemNetIntUtilTask and SystemNetOutUtilTask are implemented like the other 2 classes. Had to add getters and setters to SystemPerformanceData.
 
 ### Code Repository and Branch
 
