@@ -36,6 +36,25 @@
         "runOn": "folderOpen" // Run this task when the folder is opened
       },
       "problemMatcher": []
+    },
+    {
+      "label": "Open PIC Workspace",
+      "type": "shell",
+      "command": "code --reuse-window PIC.code-workspace",
+      "dependsOn": ["Download Python", "Download Java"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "focus": false,
+        "panel": "new"
+      },
+      "runOptions": {
+        "runOn": "folderOpen" // Run this task when the folder is opened
+      },
+      "problemMatcher": []
     }
   ]
 }
