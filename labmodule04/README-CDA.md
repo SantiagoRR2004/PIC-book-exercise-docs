@@ -8,9 +8,17 @@ Be sure to implement all the PIOT-CDA-\* issues (requirements).
 
 NOTE: Include two full paragraphs describing your implementation approach by answering the questions listed below.
 
-What does your implementation do?
+#### What does your implementation do?
 
-How does your implementation work?
+In this chapter the ability to emulate sensors and actuators using SenseHat was implemented. It uses the same structure as the simulated sensors and actuators, so the managers that were already implemented can use them with minimal modifications by simply changing the flag enableEmulator in the configuration file.
+
+#### How does your implementation work?
+
+The emulated sensors HumiditySensorEmulatorTask, PressureSensorEmulatorTask and TemperatureSensorEmulatorTask inherit from BaseSensorSimTask and implement `__init__` and `generateTelemetry` methods. The emulated actuators HumidifierEmulatorTask, HvacEmulatorTask and LedDisplayEmulatorTask inherit from BaseActuatorSimTask and implement `__init__`, `_activateActuator` and `_deactivateActuator` functions.
+
+These sensors and actuators are handled by SensorAdapterManager and ActuatorAdapterManager repectively if the flag enableEmulator is set to True in PiotConfig.props.
+
+To make SenseHat work I had to make some changes to get pisense to work. I had to add PyGObject and Pillow<10.0.0 to requirements.txt. I explain the need to downgrade Pillow in this [issue](https://github.com/waveform80/pisense/issues/7). Additionally, I also had to install libcairo2-dev, gobject-introspection libgirepository1.0-dev and libjpeg-dev. The first three are to make pisense work and the last to make the older version of Pillow work. Because I am using Linux I executed `sudo apt-get install libcairo2-dev gobject-introspection libgirepository1.0-dev libjpeg-dev` in the terminal to install them.
 
 ### Code Repository and Branch
 
