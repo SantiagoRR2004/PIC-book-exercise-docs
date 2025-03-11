@@ -20,7 +20,7 @@ The SystemPerformanceManager creates instances of SystemCpuUtilTask and SystemMe
 
 An instance SystemPerformanceManager is used by the GatewayDeviceApp to monitor the CPU and memory of the device.
 
-Extra: SystemDiskUtilTask, SystemNetIntUtilTask and SystemNetOutUtilTask are implemented like the other 2 classes. I also made all the classes that implement BaseSystemUtilTask to use their proper config constants instead of using the default. I don't know why this isn't done in the book.
+Extra: SystemDiskUtilTask, SystemNetIntUtilTask and SystemNetOutUtilTask are implemented like the other 2 classes. I also made all the classes that implement BaseSystemUtilTask use their proper config constants instead of using the default. I don't know why this isn't done in the book. At a later date I added their getters and setters to SystemPerformanceData and also made sure that everywhere that cpuUtil was used, netInUtil and netOutUtil were also used.
 
 ### Code Repository and Branch
 
