@@ -10,7 +10,15 @@ NOTE: Include two full paragraphs describing your implementation approach by ans
 
 #### What does your implementation do?
 
+In this chapter the ability to transfer data between the Constrained Device Application and the Gateway Device Application was implemented. This is done by adding the ability to transform the different types of data to JSON format and back.
+
+Extra: A Redis database was added so that the Constrained device stores the sensor, actuator and system performance data.
+
 #### How does your implementation work?
+
+The most important class in this chapter is the DataUtil class. It transforms ActuatorData, SensorData and SystemPerformanceData to and from JSON. Right now it is used more in testing than in the actual application.
+
+Extra: The RedisPersistenceAdapter class was created. It has functionalities to connect, disconnect and store data in the Redis database. The information for the connection was added to PiotConfig.props and ConfigConst. The class is used by DeviceDataManager to store sensor messages. The test RedisClientAdapterTest was created from scratch to test the functionalities of the class.
 
 ### Code Repository and Branch
 
