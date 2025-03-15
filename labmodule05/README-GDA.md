@@ -10,7 +10,15 @@ NOTE: Include two full paragraphs describing your implementation approach by ans
 
 #### What does your implementation do?
 
+As a consequence of not working on the Gateway Device Application (GDA) in chapters 3 and 4 a mix of different tasks were implemented. The main one was the translation between different types of data to JSON and back. Other things were making sure everything returns the correct information and that the classes are linked correctly.
+
+Extra: A Redis database was added so that the Gateway device stores and retrieves the sensor, actuator and system performance data. The manager of different devices subscribes to this database.
+
 #### How does your implementation work?
+
+The DataUtil class can now transform ActuatorData, SensorData and SystemPerformanceData to and from JSON. The setters and getters from ActuatorData, SensorData, SystemPerformanceData and SystemStateData were completed and/or improved. GatewayDeviceApp was updated to use DeviceDataManager instead of SystemPerformanceManager.
+
+Extra: The RedisPersistenceAdapter class was created. It has functionalities to connect, disconnect and store and retrieve data in the Redis database. Some information for the connection was added to PiotConfig.props. DeviceDataManager now extends JedisPubSub and has an instance of RedisPersistenceAdapter to be able to handle incoming messages. The test RedisClientAdapterTest was implemented to test the functionalities of RedisPersistenceAdapter.
 
 ### Code Repository and Branch
 
