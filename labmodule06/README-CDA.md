@@ -10,7 +10,24 @@ NOTE: Include two full paragraphs describing your implementation approach by ans
 
 #### What does your implementation do?
 
+In this chapter the capability to use publish/subscribe (pub/sub) data communications using MQTT for the Constrained Device Application was implemented. To implement this, mosquitto and wireshark were installed. Wireshark in particular is used for testing the MQTT communications.
+
 #### How does your implementation work?
+
+The most important class for this chapter is [MqttClientConnector](../Python/src/main/python/programmingtheiot/cda/connection/MqttClientConnector.py). It uses the [paho-mqtt](https://pypi.org/project/paho-mqtt/) library to subscribe and publish messages to different topics. The [DeviceDataManager](../Python/src/main/python/programmingtheiot/cda/app/DeviceDataManager.py) class uses the connector to subscribe and unsubscribe to the `ResourceNameEnum.CDA_ACTUATOR_CMD_RESOURCE` topic.
+
+To install Mosquitto, the following command was run:
+
+```bash
+sudo apt install mosquitto mosquitto-clients
+```
+
+To test the code with Wireshark, first Wireshark is installed. Then it needs to be opened with root privilage in Linux.
+
+```bash
+sudo apt install wireshark
+sudo wireshark
+```
 
 ### Code Repository and Branch
 
@@ -63,5 +80,7 @@ test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 - [ActuatorEmulatorManagerTest](../Python/src/test/python/programmingtheiot/part02/integration/emulated/ActuatorEmulatorManagerTest.py)
 - [DataIntegrationTest](../Python/src/test/python/programmingtheiot/part02/integration/data/DataIntegrationTest.py)
 - [RedisClientAdapterTest](../Python/src/test/python/programmingtheiot/part02/integration/connection/RedisClientAdapterTest.py)
+- [MqttClientConnectorTest](../Python/src/test/python/programmingtheiot/part03/integration/connection/MqttClientConnectorTest.py)
+- [MqttClientControlPacketTest](../Python/src/test/python/programmingtheiot/part03/integration/connection/MqttClientControlPacketTest.py)
 
 EOF.
