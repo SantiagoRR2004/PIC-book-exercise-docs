@@ -10,7 +10,16 @@ NOTE: Include two full paragraphs describing your implementation approach by ans
 
 #### What does your implementation do?
 
+In this chapter the capability to use publish/subscribe (pub/sub) data communications using MQTT for the Constrained Device Application was implemented. Mosquitto and Wireshark are already installed the last chapter.
+
 #### How does your implementation work?
+
+The most important class for this chapter is [MqttClientConnector](../Java/src/main/java/programmingtheiot/gda/connection/MqttClientConnector.java). It uses the [Eclipse Paho](https://central.sonatype.com/artifact/org.eclipse.paho/org.eclipse.paho.client.mqttv3) library to subscribe and publish messages to different topics. The [DeviceDataManager](../Java/src/main/java/programmingtheiot/gda/app/DeviceDataManager.java) class uses the connector to subscribe and unsubscribe to the following list of topics:
+
+- `ResourceNameEnum.GDA_MGMT_STATUS_MSG_RESOURCE`
+- `ResourceNameEnum.CDA_ACTUATOR_RESPONSE_RESOURCE`
+- `ResourceNameEnum.CDA_SENSOR_MSG_RESOURCE`
+- `ResourceNameEnum.CDA_SYSTEM_PERF_MSG_RESOURCE`
 
 ### Code Repository and Branch
 
