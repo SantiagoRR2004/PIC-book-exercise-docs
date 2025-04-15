@@ -10,7 +10,13 @@ NOTE: Include two full paragraphs describing your implementation approach by ans
 
 #### What does your implementation do?
 
+In this chapter a basic CoAP sever was implemented. It has multiple handlers and only the PUT method was implemented.
+
 #### How does your implementation work?
+
+The most important class for this chapter is [CoapServerGateway](../Java/src/main/java/programmingtheiot/gda/connection/CoapServerGateway.java). It uses the [Eclipse Californium](https://eclipse.dev/californium/) library to create a CoAP server. The [DeviceDataManager](../Java/src/main/java/programmingtheiot/gda/app/DeviceDataManager.java) class creates, starts and stops the CoAP server. The server uses multiple handlers: one for the actuator commands [GetActuatorCommandResourceHandler](../Java/src/main/java/programmingtheiot/gda/connection/handlers/GetActuatorCommandResourceHandler.java), another for the telemetry [UpdateTelemetryResourceHandler](../Java/src/main/java/programmingtheiot/gda/connection/handlers/UpdateTelemetryResourceHandler.java) and another for the system performance data [UpdateSystemPerformanceResourceHandler](../Java/src/main/java/programmingtheiot/gda/connection/handlers/UpdateSystemPerformanceResourceHandler.java). The three handlers are made from the generic class [GenericCoapResourceHandler](../Java/src/main/java/programmingtheiot/gda/connection/handlers/GenericCoapResourceHandler.java) which implements the CoAP Resource interface.
+
+To install Californium, a script that runs automatically when the proyect is opened in Visual Studio Code was created. If VSCode is not used, the script [buildCalifornium](../Java/buildCalifornium.sh) can be used.
 
 ### Code Repository and Branch
 
