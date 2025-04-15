@@ -18,9 +18,13 @@ To make the tests work I choose to modify the PYTHONPATH with the [.env](../Pyth
 
 I also made Visual Studio Code's Testing work by adding multiple `__init__.py` files and adding normal unnitest configurations in the settings.json file.
 
+Later I changed the types of tests to pytest, so I could run tests in parallel.
+
 #### How does your implementation work?
 
 By using multiple Vscode configurations, I made everything work.
+
+The pytest configuration is in the [pytest.ini](../Python/pytest.ini) file
 
 ### Code Repository and Branch
 
