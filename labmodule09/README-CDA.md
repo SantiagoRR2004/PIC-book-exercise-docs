@@ -10,7 +10,19 @@ NOTE: Include two full paragraphs describing your implementation approach by ans
 
 #### What does your implementation do?
 
+A CoAP client is added that can send requests (GET, POST, PUT, DELETE) to the GDA CoAP server.
+
 #### How does your implementation work?
+
+The class [CoapClientConnector](../Python/src/main/python/programmingtheiot/cda/connection/CoapClientConnector.py) is added to [DeviceDataManager](../Python/src/main/python/programmingtheiot/cda/app/DeviceDataManager.py) and implemented. The following methods were implemented:
+
+- `sendDiscoveryRequest()`: Sends a discovery request to the GDA CoAP server.
+- `sendDeleteRequest()`: Sends a DELETE request to the GDA CoAP server.
+- `sendGetRequest()`: Sends a GET request to the GDA CoAP server.
+- `sendPostRequest()`: Sends a POST request to the GDA CoAP server.
+- `sendPutRequest()`: Sends a PUT request to the GDA CoAP server.
+- `startObserver()`: Starts an observer to listen for notifications from the GDA CoAP server.
+- `stopObserver()`: Stops the observer.
 
 ### Code Repository and Branch
 
