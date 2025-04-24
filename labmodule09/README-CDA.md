@@ -24,6 +24,8 @@ The class [CoapClientConnector](../Python/src/main/python/programmingtheiot/cda/
 - `startObserver()`: Starts an observer to listen for notifications from the GDA CoAP server.
 - `stopObserver()`: Stops the observer.
 
+The the CoAP client could be implemented with the [CoAPthon3](https://github.com/Tanganelli/CoAPthon3/) or the [aiocoap](https://github.com/chrysn/aiocoap/) library. The latter was chosen for its greater GitHub activity.
+
 ### Code Repository and Branch
 
 NOTE: Be sure to include the branch.
