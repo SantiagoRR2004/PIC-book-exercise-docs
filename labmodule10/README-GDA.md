@@ -39,4 +39,75 @@ test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 -
 -
 
+### GDA MQTT Client Performance Test Results
+
+#### `testConnectAndDisconnect`
+
+```text
+abr 24, 2025 9:48:17 A. M. programmingtheiot.gda.connection.MqttClientConnector connectClient
+INFORMACIÓN: MQTT client connecting to broker: tcp://localhost:1883
+abr 24, 2025 9:48:18 A. M. programmingtheiot.gda.connection.MqttClientConnector disconnectClient
+INFORMACIÓN: Disconnecting MQTT client from broker: tcp://localhost:1883
+abr 24, 2025 9:48:18 A. M. programmingtheiot.gda.connection.MqttClientConnector connectComplete
+INFORMACIÓN: MQTT connection successful (is reconnect = false). Broker: tcp://localhost:1883
+abr 24, 2025 9:48:18 A. M. programmingtheiot.part03.integration.connection.MqttClientPerformanceTest testConnectAndDisconnect
+INFORMACIÓN: Connect and Disconnect [1]: 416 ms
+```
+
+#### `testPublishQoS0`
+
+```text
+abr 24, 2025 9:51:00 A. M. programmingtheiot.gda.connection.MqttClientConnector connectClient
+INFORMACIÓN: MQTT client connecting to broker: tcp://localhost:1883
+abr 24, 2025 9:51:00 A. M. programmingtheiot.gda.connection.MqttClientConnector connectComplete
+INFORMACIÓN: MQTT connection successful (is reconnect = false). Broker: tcp://localhost:1883
+abr 24, 2025 9:51:01 A. M. programmingtheiot.gda.connection.MqttClientConnector disconnectClient
+INFORMACIÓN: Disconnecting MQTT client from broker: tcp://localhost:1883
+abr 24, 2025 9:51:01 A. M. programmingtheiot.part03.integration.connection.MqttClientPerformanceTest execTestPublish
+INFORMACIÓN: \n\tTesting Publish: QoS = 0 | msgs = 10000 | payload size = 212 | start = 1.7454811E9 | end = 1.7454811E9 | elapsed = 1.272
+abr 24, 2025 9:51:01 A. M. programmingtheiot.part03.integration.connection.MqttClientPerformanceTest execTestPublish
+INFORMACIÓN: Publish message - QoS 0 [10000]: 1272 ms
+```
+
+#### `testPublishQoS1`
+
+```text
+abr 24, 2025 9:51:48 A. M. programmingtheiot.gda.connection.MqttClientConnector connectClient
+INFORMACIÓN: MQTT client connecting to broker: tcp://localhost:1883
+abr 24, 2025 9:51:48 A. M. programmingtheiot.gda.connection.MqttClientConnector connectComplete
+INFORMACIÓN: MQTT connection successful (is reconnect = false). Broker: tcp://localhost:1883
+abr 24, 2025 9:51:49 A. M. programmingtheiot.gda.connection.MqttClientConnector publishMessage
+abr 24, 2025 9:51:50 A. M. programmingtheiot.gda.connection.MqttClientConnector disconnectClient
+INFORMACIÓN: Disconnecting MQTT client from broker: tcp://localhost:1883
+abr 24, 2025 9:51:50 A. M. programmingtheiot.part03.integration.connection.MqttClientPerformanceTest execTestPublish
+INFORMACIÓN: \n\tTesting Publish: QoS = 1 | msgs = 10000 | payload size = 212 | start = 1.7454811E9 | end = 1.7454811E9 | elapsed = 1.493
+abr 24, 2025 9:51:50 A. M. programmingtheiot.part03.integration.connection.MqttClientPerformanceTest execTestPublish
+INFORMACIÓN: Publish message - QoS 1 [10000]: 1493 ms
+```
+
+#### `testPublishQoS2`
+
+```text
+abr 24, 2025 9:54:00 A. M. programmingtheiot.gda.connection.MqttClientConnector connectClient
+INFORMACIÓN: MQTT client connecting to broker: tcp://localhost:1883
+abr 24, 2025 9:54:00 A. M. programmingtheiot.gda.connection.MqttClientConnector connectComplete
+INFORMACIÓN: MQTT connection successful (is reconnect = false). Broker: tcp://localhost:1883
+abr 24, 2025 9:54:03 A. M. programmingtheiot.gda.connection.MqttClientConnector disconnectClient
+INFORMACIÓN: Disconnecting MQTT client from broker: tcp://localhost:1883
+abr 24, 2025 9:54:03 A. M. programmingtheiot.part03.integration.connection.MqttClientPerformanceTest execTestPublish
+INFORMACIÓN: \n\tTesting Publish: QoS = 2 | msgs = 10000 | payload size = 212 | start = 1.7454812E9 | end = 1.7454812E9 | elapsed = 2.383
+abr 24, 2025 9:54:03 A. M. programmingtheiot.part03.integration.connection.MqttClientPerformanceTest execTestPublish
+INFORMACIÓN: Publish message - QoS 2 [10000]: 2383 ms
+```
+
+#### Results
+
+The connect and disconnect test took 416 ms, while the publish tests took the following times:
+
+- QoS 0: 1272 ms
+- QoS 1: 1493 ms
+- QoS 2: 2383 ms
+
+As expected, the QoS 0 test was the fastest, while the QoS 2 test was the slowest. The QoS 1 test was in between. This is consistent with the expected behavior of MQTT, where higher QoS levels introduce more overhead due to message acknowledgment and delivery guarantees.
+
 EOF.
