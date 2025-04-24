@@ -147,7 +147,7 @@ test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 2025-04-24 09:41:20,818:root:INFO:Publish message - QoS 2 [10000]: 2281.804029 ms
 ```
 
-#### Results
+#### MQTT Results
 
 The connect and disconnect test took 905.27463 ms, while the publish tests took the following times:
 
@@ -156,5 +156,83 @@ The connect and disconnect test took 905.27463 ms, while the publish tests took 
 - QoS 2: 2281.804029 ms
 
 As expected, the QoS 0 test was the fastest, while the QoS 2 test was the slowest. The QoS 1 test was in between. This is consistent with the expected behavior of MQTT, where higher QoS levels introduce more overhead due to message acknowledgment and delivery guarantees.
+
+### CDA CoAP Client Performance Test Results
+
+#### `testGetRequestCon`
+
+```text
+Received test ids from temp file.
+testGetRequestCon (src.test.python.programmingtheiot.part03.integration.connection.CoapClientPerformanceTest.CoapClientPerformanceTest.testGetRequestCon)
+Comment the annotation to perf test CON GET ... Testing GET - CON
+
+GET message - useCON = True [10000]: 35173.175996 ms
+ok
+```
+
+#### `testGetRequestNon`
+
+```text
+Received test ids from temp file.
+testGetRequestNon (src.test.python.programmingtheiot.part03.integration.connection.CoapClientPerformanceTest.CoapClientPerformanceTest.testGetRequestNon)
+Comment the annotation to perf test NON GET ... Testing GET - NON
+
+GET message - useCON = False [10000]: 33680.407327 ms
+ok
+```
+
+#### `testPostRequestCon`
+
+```text
+Received test ids from temp file.
+testPostRequestCon (src.test.python.programmingtheiot.part03.integration.connection.CoapClientPerformanceTest.CoapClientPerformanceTest.testPostRequestCon)
+Comment the annotation to perf test CON POST ... Testing POST - CON
+
+POST message - useCON = True [10000]: 32593.874654 ms. Payload Len: 264
+ok
+```
+
+#### `testPostRequestNon`
+
+```text
+Received test ids from temp file.
+testPostRequestNon (src.test.python.programmingtheiot.part03.integration.connection.CoapClientPerformanceTest.CoapClientPerformanceTest.testPostRequestNon)
+Comment the annotation to perf test NON POST ... Testing POST - NON
+
+POST message - useCON = False [10000]: 32346.401918 ms. Payload Len: 264
+ok
+```
+
+#### `testPutRequestCon`
+
+```text
+Received test ids from temp file.
+testPutRequestCon (src.test.python.programmingtheiot.part03.integration.connection.CoapClientPerformanceTest.CoapClientPerformanceTest.testPutRequestCon)
+Comment the annotation to perf test CON PUT ... Testing PUT - CON
+
+PUT message - useCON = True [10000]: 33484.645943 ms. Payload Len: 264
+ok
+```
+
+#### `testPutRequestNon`
+
+```text
+Received test ids from temp file.
+testPutRequestNon (src.test.python.programmingtheiot.part03.integration.connection.CoapClientPerformanceTest.CoapClientPerformanceTest.testPutRequestNon)
+Comment the annotation to perf test NON PUT ... Testing PUT - NON
+
+PUT message - useCON = False [10000]: 33481.26746 ms. Payload Len: 264
+ok
+```
+
+#### CoAP Results
+
+The percentage difference between CON and NON is:
+
+- GET: 4.43%
+- POST: 0.77%
+- PUT: 0.01%
+
+The fastest was the POST request without CON, taking 32593.874654 ms, while the slowest was the GET request with CON, taking 35173.175996 ms. All tests that required confirmation (CON) were slower than those that did not. This is consistent with the expected behavior of CoAP, where CON messages require additional round trips for acknowledgment, leading to increased latency.
 
 EOF.
