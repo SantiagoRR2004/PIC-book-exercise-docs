@@ -77,5 +77,6 @@ test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 - [RedisClientAdapterTest](../Python/src/test/python/programmingtheiot/part02/integration/connection/RedisClientAdapterTest.py)
 - [MqttClientConnectorTest](../Python/src/test/python/programmingtheiot/part03/integration/connection/MqttClientConnectorTest.py)
 - [MqttClientControlPacketTest](../Python/src/test/python/programmingtheiot/part03/integration/connection/MqttClientControlPacketTest.py)
+- [CoapClientConnectorTest](../Python/src/test/python/programmingtheiot/part03/integration/connection/CoapClientConnectorTest.py)
 
 EOF.
