@@ -72,6 +72,10 @@ test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 - [MqttClientConnectorTest](../Python/src/test/python/programmingtheiot/part03/integration/connection/MqttClientConnectorTest.py)
 - [MqttClientControlPacketTest](../Python/src/test/python/programmingtheiot/part03/integration/connection/MqttClientControlPacketTest.py)
 - [CoapClientConnectorTest](../Python/src/test/python/programmingtheiot/part03/integration/connection/CoapClientConnectorTest.py)
+- [MqttClientPerformanceTest](../Python/src/test/python/programmingtheiot/part03/integration/connection/MqttClientPerformanceTest.py)
+- [CoapClientPerformanceTest](../Python/src/test/python/programmingtheiot/part03/integration/connection/CoapClientPerformanceTest.py)
+- [DeviceDataManagerCallbackTest](../Python/src/test/python/programmingtheiot/part03/integration/app/DeviceDataManagerCallbackTest.py)
+- [DeviceDataManagerIntegrationTest](../Python/src/test/python/programmingtheiot/part03/integration/app/DeviceDataManagerIntegrationTest.py)
 
 ### CDA MQTT Client Performance Test Results
 
