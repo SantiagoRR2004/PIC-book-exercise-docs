@@ -10,7 +10,13 @@ NOTE: Include two full paragraphs describing your implementation approach by ans
 
 #### What does your implementation do?
 
+The application begins working combining parts of the previous labs. Actuation events are trigger when some sensors reach certain thresholds. Encryption for the MQTT was implemented and the use of an asynchronous MQTT client was added.
+
 #### How does your implementation work?
+
+Multiple tests were implemented to check the performance of the [MQTT](../Python/src/test/python/programmingtheiot/part03/integration/connection/MqttClientPerformanceTest.py) and [CoAP](../Python/src/test/python/programmingtheiot/part03/integration/connection/CoapClientPerformanceTest.py) clients. Here are the results for the [MQTT](#cda-mqtt-client-performance-test-results) and [CoAP](#cda-coap-client-performance-test-results) tests.
+
+In the [ConstrainedDeviceApp](../Python/src/main/python/programmingtheiot/cda/app/ConstrainedDeviceApp.py) class the [DeviceDataManager](../Python/src/main/python/programmingtheiot/cda/app/DeviceDataManager.py) was instantiated. If the MQTT client is async is stored in a boolean variable. There are two clients and when a message is recieved it tries using [MQTT](../Python/src/main/python/programmingtheiot/cda/connection/MqttClientConnector.py) first and if it doesn't work is uses the [CoAP](../Python/src/main/python/programmingtheiot/cda/connection/CoapClientConnector.py) client.
 
 ### Code Repository and Branch
 
