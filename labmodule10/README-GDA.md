@@ -10,7 +10,15 @@ NOTE: Include two full paragraphs describing your implementation approach by ans
 
 #### What does your implementation do?
 
+The application begins working combining parts of the previous labs. Actuation events are trigger when some sensors reach certain thresholds. Encryption for the MQTT was implemented and the use of an asynchronous MQTT client was added.
+
 #### How does your implementation work?
+
+Multiple tests were implemented to check the performance of the [MQTT](../Java/src/test/python/programmingtheiot/part03/integration/connection/MqttClientPerformanceTest.py) client. Here are the results for the [MQTT](#gda-mqtt-client-performance-test-results) tests. There are no CoAP performance tests because the client is in the cda.
+
+To trigger the actuation events, multiple values were added to the [PiotConfig](../Java/config/PiotConfig.props) file and their keys in the [ConfigConst](../Java/src/main/java/programmingtheiot/common/ConfigConst.java) class. These are used in the [DeviceDataManager](../Java/src/main/java/programmingtheiot/gda/app/DeviceDataManager.java) to send a message when the humidity is too low or too high for a duration of time.
+
+The use of the asynchronous MQTT client was added to the [MqttClientConnector](../Java/src/main/java/programmingtheiot/gda/connection/MqttClientConnector.java) class. Everywhere that the non-asynchronous client was used, the asynchronous client can be used if the boolena value stored in [PiotConfig](../Java/config/PiotConfig.props) is set to true.
 
 ### Code Repository and Branch
 
