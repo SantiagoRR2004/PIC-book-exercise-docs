@@ -2,22 +2,21 @@
 
 ## Lab Module 11
 
-Be sure to implement all the PIOT-GDA-* issues (requirements) listed.
+Be sure to implement all the PIOT-GDA-\* issues (requirements) listed.
 
 ### Description
 
 NOTE: Include two full paragraphs describing your implementation approach by answering the questions listed below.
 
-What does your implementation do? 
+What does your implementation do?
 
-How does your implementation work?
+#### How does your implementation work?
 
 ### Code Repository and Branch
 
 NOTE: Be sure to include the branch.
 
-URL: 
-
+URL: [chapter10](https://github.com/SantiagoRR2004/PIC-java-components/tree/chapter11)
 
 ### Unit Tests Executed
 
@@ -25,9 +24,9 @@ NOTE: The instructor will execute your unit tests. You only need to list each te
 (e.g. ConfigUtilTest, DataUtilTest, etc). Be sure to include all previous tests, too,
 since you need to ensure you haven't introduced regressions.
 
-- 
-- 
-- 
+-
+-
+-
 
 ### Integration Tests Executed
 
@@ -36,8 +35,8 @@ some exceptions (such as your cloud connectivity tests). In such cases, they'll 
 your code to ensure it's correct. As for the tests you execute, you only need to list each
 test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 
-- 
-- 
-- 
+-
+-
+-
 
 EOF.
