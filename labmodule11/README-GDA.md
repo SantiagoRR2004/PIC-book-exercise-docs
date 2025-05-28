@@ -8,9 +8,13 @@ Be sure to implement all the PIOT-GDA-\* issues (requirements) listed.
 
 NOTE: Include two full paragraphs describing your implementation approach by answering the questions listed below.
 
-What does your implementation do?
+#### What does your implementation do?
+
+A connection to the cloud is now implemented. The service used is [Ubidots](https://industrial.ubidots.com/).
 
 #### How does your implementation work?
+
+[CloudClientConnector](../Java/src/main/java/programmingtheiot/gda/connection/CloudClientConnector.java) is the class that connects to the cloud. It implements [ICloudClient](../Java/src/main/java/programmingtheiot/gda/connection/ICloudClient.java) and [IConnectionListener](../Java/src/main/java/programmingtheiot/gda/connection/IConnectionListener.java). The CloudClientConnector is used in the [DeviceDataManager](../Java/src/main/java/programmingtheiot/gda/app/DeviceDataManager.java) to send data to the cloud the same way as all other clients. All the CloudClientConnector configuration is stored in the [PiotConfig](../Java/config/PiotConfig.props) file, including how to connect to Ubidots.
 
 ### Code Repository and Branch
 
