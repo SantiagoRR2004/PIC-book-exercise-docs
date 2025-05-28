@@ -57,5 +57,6 @@ test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 - [CoapServerGatewayTest](../Java/src/test/java/programmingtheiot/part03/integration/connection/CoapServerGatewayTest.java)
 - [MqttClientPerformanceTest](../Java/src/test/java/programmingtheiot/part03/integration/connection/MqttClientPerformanceTest.java)
 - [DeviceDataManagerSimpleCdaActuationTest](../Java/src/test/java/programmingtheiot/part03/integration/app/DeviceDataManagerSimpleCdaActuationTest.java)
+- [CloudClientConnectorTest](../Java/src/test/java/programmingtheiot/part04/integration/connection/CloudClientConnectorTest.java)
 
 EOF.
