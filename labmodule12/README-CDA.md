@@ -43,6 +43,7 @@ since you need to ensure you haven't introduced regressions.
 - [HumidifierActuatorSimTaskTest](../Python/src/test/python/programmingtheiot/part02/unit/sim/HumidifierActuatorSimTaskTest.py)
 - [HvacActuatorSimTaskTest](../Python/src/test/python/programmingtheiot/part02/unit/sim/HvacActuatorSimTaskTest.py)
 - [DataUtilTest](../Python/src/test/python/programmingtheiot/part02/unit/data/DataUtilTest.py)
+- [PICGradeSensorSimTaskTest](../Python/src/test/python/programmingtheiot/part02/unit/sim/PICGradeSensorSimTaskTest.py)
 
 ### Integration Tests Executed
 
@@ -74,5 +75,6 @@ test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 - [CoapClientPerformanceTest](../Python/src/test/python/programmingtheiot/part03/integration/connection/CoapClientPerformanceTest.py)
 - [DeviceDataManagerCallbackTest](../Python/src/test/python/programmingtheiot/part03/integration/app/DeviceDataManagerCallbackTest.py)
 - [DeviceDataManagerIntegrationTest](../Python/src/test/python/programmingtheiot/part03/integration/app/DeviceDataManagerIntegrationTest.py)
+- [PICGradeEmulatorTaskTest](../Python/src/test/python/programmingtheiot/part02/integration/emulated/PICGradeEmulatorTaskTest.py)
 
 EOF.
