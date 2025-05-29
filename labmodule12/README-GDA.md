@@ -14,6 +14,8 @@ For this implementation a new sensor and actuator had to be added. The new senso
 
 #### How does your implementation work?
 
+In the [DeviceDataManager](../Java/src/main/java/programmingtheiot/gda/app/DeviceDataManager.java) a new function called `handleGradeSensorAnalysis` was created. When the sensor data arrives it checks to activate the actuator or not. The new configuration is in [PiotConfig](../Java/config/PiotConfig.props) and in [ConfigConst](../Java/src/main/java/programmingtheiot/common/ConfigConst.java).
+
 ### Code Repository and Branch
 
 NOTE: Be sure to include the branch.
