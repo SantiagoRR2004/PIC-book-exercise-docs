@@ -14,6 +14,8 @@ For this implementation a new sensor and actuator had to be added. The new senso
 
 #### How does your implementation work?
 
+Several new classes were implemented: [PICGradeSensorEmulatorTask](../Python/src/main/python/programmingtheiot/cda/emulated/PICGradeSensorEmulatorTask.py), [PICTestEmulatorTask](../Python/src/main/python/programmingtheiot/cda/emulated/PICTestEmulatorTask.py), [PICGradeSensorSimTask](../Python/src/main/python/programmingtheiot/cda/sim/PICGradeSensorSimTask.py) and [PICTestActuatorSimTask](../Python/src/main/python/programmingtheiot/cda/sim/PICTestActuatorSimTask.py). They are all based on the similar classes of humidity and humidifier and are used in the same way in the rest of the code with new configuration in [PiotConfig](../Python/config/PiotConfig.props) and in [ConfigConst](../Python/src/main/python/programmingtheiot/common/ConfigConst.py). The only notable thing is that to create a PIC test in [PICTestEmulatorTask](../Python/src/main/python/programmingtheiot/cda/emulated/PICTestEmulatorTask.py) an external repository is used to generate them.
+
 ### Code Repository and Branch
 
 NOTE: Be sure to include the branch.
