@@ -10,6 +10,8 @@ NOTE: Include two full paragraphs describing your implementation approach by ans
 
 #### What does your implementation do?
 
+For this implementation a new sensor and actuator had to be added. The new sensor is the grade given by a PIC exam and the actuator opens a PIC test in the browser to practice more PIC. The CDA handles creating the data for the sensor and actuates when the actuator is triggered.
+
 #### How does your implementation work?
 
 ### Code Repository and Branch

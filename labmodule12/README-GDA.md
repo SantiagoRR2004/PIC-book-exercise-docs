@@ -10,6 +10,8 @@ NOTE: Include two full paragraphs describing your implementation approach by ans
 
 #### What does your implementation do?
 
+For this implementation a new sensor and actuator had to be added. The new sensor is the grade given by a PIC exam and the actuator opens a PIC test in the browser to practice more PIC. The GDA recieves the data from the CDA and when 5 exams in a row have been failed it sends a trigger to the GDA to open the PIC test in the browser.
+
 #### How does your implementation work?
 
 ### Code Repository and Branch
