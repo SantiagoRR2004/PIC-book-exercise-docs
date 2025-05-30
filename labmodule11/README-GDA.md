@@ -20,7 +20,7 @@ A connection to the cloud is now implemented. The service used is [Ubidots](http
 
 NOTE: Be sure to include the branch.
 
-URL: [chapter10](https://github.com/SantiagoRR2004/PIC-java-components/tree/chapter11)
+URL: [chapter11](https://github.com/SantiagoRR2004/PIC-java-components/tree/chapter11)
 
 ### Unit Tests Executed
 
@@ -58,5 +58,11 @@ test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 - [MqttClientPerformanceTest](../Java/src/test/java/programmingtheiot/part03/integration/connection/MqttClientPerformanceTest.java)
 - [DeviceDataManagerSimpleCdaActuationTest](../Java/src/test/java/programmingtheiot/part03/integration/app/DeviceDataManagerSimpleCdaActuationTest.java)
 - [CloudClientConnectorTest](../Java/src/test/java/programmingtheiot/part04/integration/connection/CloudClientConnectorTest.java)
+
+### Images for proof
+
+![Cloud image](/labmodule11/cloud.png)
+![GDA image](/labmodule11/gda.png)
+![CDA image](/labmodule11/cda.png)
 
 EOF.
