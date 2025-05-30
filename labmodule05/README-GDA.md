@@ -18,7 +18,7 @@ Extra: A Redis database was added so that the Gateway device stores and retrieve
 
 The DataUtil class can now transform ActuatorData, SensorData and SystemPerformanceData to and from JSON. The setters and getters from ActuatorData, SensorData, SystemPerformanceData and SystemStateData were completed and/or improved. GatewayDeviceApp was updated to use DeviceDataManager instead of SystemPerformanceManager.
 
-Extra: The RedisPersistenceAdapter class was created. It has functionalities to connect, disconnect and store and retrieve data in the Redis database. Some information for the connection was added to PiotConfig.props. DeviceDataManager now extends JedisPubSub and has an instance of RedisPersistenceAdapter to be able to handle incoming messages. The test RedisClientAdapterTest was implemented to test the functionalities of RedisPersistenceAdapter.
+Extra: The [RedisPersistenceAdapter](../Java/src/main/java/programmingtheiot/gda/connection/RedisPersistenceAdapter.java) class was created. It has functionalities to connect, disconnect and store and retrieve data in the Redis database. Some information for the connection was added to PiotConfig.props. It uses JedisPool to make sure that it can connect when using multiple threads. DeviceDataManager now extends JedisPubSub and has an instance of RedisPersistenceAdapter to be able to handle incoming messages. The test RedisClientAdapterTest was implemented to test the functionalities of RedisPersistenceAdapter.
 
 ### Code Repository and Branch
 
