@@ -1,38 +1,11 @@
 # Programming the IoT
 
-Clone this repository so you can capture the documentation artifacts
-for each Lab Module exercise you'll implement as part of this course.
+## Overview
 
-You can also use this repository to help track your progress with the exercises using the simple Markdown checklists provided in each sub-directory.
+This is a project for a subject called "Plataforma de Internet de las Cosas" (Internet of Things) that accounted for 40% of the final grade. It had to be handed in twice: the first half was on Friday, the 21st of March of 2025, and earned a grade of 10 out of 10 points. The complete project submission took place on Friday, the 30th of May of 2025, and earned a grade of $9.7\overline{2}$ out of 10 points.
 
-# What You'll Find In This Project
+Because the first half was worth less than the complete project (15% vs. 25%), the final grade was $9.8263\overline{8}$ out of 10.
 
-Each sub-directory maps to a specific Lab Module.
-Within each sub-directory are the Markdown files that correlate to the documentation you can fill out related to each lab, as follows:
-  - CDA-REQ-CHECKLIST.md: Use this to check off the CDA-specific (Constrained Device App) exercise tasks for the named Lab Module. This file will only exist if there are CDA-specific tasks to complete.
-  - GDA-REQ-CHECKLIST.md: Use this to check off the GDA-specific (Gateway Device App) exercise tasks for the named Lab Module. This file will only exist if there are GDA-specific tasks to complete.
-  - CSF-REQ-CHECKLIST.md: Use this to check off the CSF-specific (Cloud Service Functions) exercise tasks for the named Lab Module. This file will only exist if there are CSF-specific tasks to complete.
-  - README-CDA.md: Use this to document your CDA-specific design. This file will only exist if there is CDA-specific documentation to complete.
-  - README-GDA.md: Use this to document your GDA-specific design. This file will only exist if there is GDA-specific documentation to complete.
-  - README-CSF.md: Use this to document your CSF-specific design. This file will only exist if there is CSF-specific documentation to complete.
-  - README-PROJECT-PROPOSAL.md: Use this to document your Final Project Proposal. This file only exists as part of Lab 12.
-  - README-PROJECT-FINAL.md: Use this to document your Final Project Final Write-up. This file only exists as part of Lab 12.
-  
-# License
+## Project Summary
 
-*This README.md File - Usage and License*
-
- - The following files are &copy; 2020 - 2024 by [Andrew D. King](https://andyking.me)</a> and licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/ " target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0 <img height="24" style="!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img height="24" style="!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img height="24" style="!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img height="24" style="!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a>
-   - README.md
-
-*All {prefix}-CHECKLIST.md and Additional README-{postfix}.md Files - Usage and License*
-
- - The following template files are &copy; 2020 - 2024 by [Andrew D. King](https://andyking.me)</a> and licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0 <img height="24" style="!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img height="24" style="!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a>
-   - CDA-REQ-CHECKLIST.md
-   - GDA-REQ-CHECKLIST.md
-   - CSF-REQ-CHECKLIST.md
-   - README-CDA.md
-   - README-GDA.md
-   - README-CSF.md
-   - README-PROJECT-PROPOSAL.md
-   - README-PROJECT-FINAL.md
+For this project, we had to follow the instructions given in this [book](https://learning.oreilly.com/library/view/programming-the-internet/9781492081401/) to create a Constrained Device Application (CDA) and a Gateway Device Application (GDA) that would communicate with each other. The CDA is implemented in Python in [this repository](https://github.com/SantiagoRR2004/PIC-Python) and the GDA is implemented in Java in [this repository](https://github.com/SantiagoRR2004/PIC-Java).
